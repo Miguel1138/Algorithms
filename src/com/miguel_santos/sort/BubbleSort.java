@@ -2,7 +2,7 @@ package com.miguel_santos.sort;
 
 public class BubbleSort {
 
-    public void bubbleSort(int[] vetor) {
+    public static void bubbleSort(int[] vetor) {
         boolean troca = true;
         int aux;
         while(troca) {

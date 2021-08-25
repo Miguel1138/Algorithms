@@ -1,13 +1,8 @@
 package com.miguel_santos.sort;
 
-import org.junit.Test;
-
-import static org.junit.Assert.assertArrayEquals;
-
 // Source https://www.baeldung.com/java-merge-sort
 public class MergeSort {
-
-    public void mergeSort(int[] array) {
+    public static void mergeSort(int[] array) {
         int totalIndexes = array.length;
         if (totalIndexes < 2) {
             return;
@@ -29,7 +24,7 @@ public class MergeSort {
         merge(array, leftArray, rightArray, mid, totalIndexes - mid);
     }
 
-    private void merge(int[] array, int[] leftArray, int[] rightArray, int left, int right) {
+    private static void merge(int[] array, int[] leftArray, int[] rightArray, int left, int right) {
         int i = 0;
         int j = 0;
         int key = 0;
@@ -49,12 +44,5 @@ public class MergeSort {
         }
     }
 
-    @Test
-    public void test() {
-        int[] actual = {1, 5, 6, 4, 8, 26, 4};
-        int[] expected = {1, 4, 4, 5, 6, 8, 26};
-        mergeSort(actual);
-        assertArrayEquals(expected,actual);
 
-    }
 }
