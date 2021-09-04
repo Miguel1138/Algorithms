@@ -3,12 +3,9 @@ package com.miguel_santos.sort;
 import org.jetbrains.annotations.NotNull;
 
 public class InsertionSort {
-
     public static void sort(int @NotNull [] vetor) {
-        int key;
-
         for (int i = 1; i < vetor.length; i++) {
-            key = vetor[i];
+            int key = vetor[i];
             int j = i - 1;
             while (j >= 0 && vetor[j] > key) {
                 vetor[j + 1] = vetor[j];
@@ -33,6 +30,5 @@ public class InsertionSort {
         }
         return array;
     }
-
 
 }
